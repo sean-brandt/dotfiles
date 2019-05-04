@@ -9,7 +9,7 @@
   "editor.tabCompletion": "on",
   "explorer.openEditors.visible": 0,
   "window.restoreWindows": "none",
-  "terminal.external.osxExec": "iTerm.app",
+  "terminal.external.osxExec": "Hyper.app",
   "terminal.integrated.fontSize": 14,
   "files.autoSave": "onFocusChange",
   "extensions.autoUpdate": true,
@@ -18,7 +18,7 @@
   "files.trimTrailingWhitespace": true,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "none",
-  "workbench.colorTheme": "Monokai Night",
+  "workbench.colorTheme": "Dracula",
   "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
   "go.coverageDecorator": {
