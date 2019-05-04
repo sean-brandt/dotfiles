@@ -18,8 +18,7 @@ for file in ${(M)config_files:#*/path.zsh}; do
   source "$file"
 done
 
-# load antibody plugins
-source ~/.zsh_plugins.sh
+source ~/.zplug.zsh
 
 # load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
@@ -45,3 +44,4 @@ unset config_files updated_at
 # want in your public, versioned repo.
 # shellcheck disable=SC1090
 [ -f ~/.localrc ] && . ~/.localrc
+

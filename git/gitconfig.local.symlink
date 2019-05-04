@@ -1,22 +1,41 @@
-[difftool "diffmerge"]
-	cmd = diffmerge $LOCAL $REMOTE
 [alias]
+  br = branch
+  changed = show --pretty=\"format:\" --name-only
+  ci = commit
 	co = checkout
+  commend = commit --amend --no-edit
 	count = shortlog -sn
+  fm = fetch-merge
+  fpr = fetch-pr
 	g = grep --break --heading --line-number
 	gi = grep --break --heading --line-number -i
-	changed = show --pretty=\"format:\" --name-only
-	fm = fetch-merge
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  lt = log --tags --decorate --simplify-by-decoration --oneline
 	pr = open-pr
 	please = push --force-with-lease
-	commend = commit --amend --no-edit
-	fpr = fetch-pr
-	lt = log --tags --decorate --simplify-by-decoration --oneline
+	st = status -sb
+	whatadded = log --diff-filter=A
+[apply]
+	whitespace = nowarn
 [color]
 	diff = auto
 	status = auto
 	branch = auto
 	ui = true
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
@@ -24,8 +43,15 @@
 	autocrlf = input
 	whitespace = trailing-space,space-before-tab
 	precomposeunicode = true
-[apply]
-	whitespace = nowarn
+[branch]
+	autosetupmerge = true
+	autosetuprebase = always
+
+[github]
+  user = sean-brandt
+  token = ae00d4156051a23810e556e03115fa2e
+[difftool "diffmerge"]
+	cmd = diffmerge $LOCAL $REMOTE
 [help]
 	autocorrect = 1
 [merge]
@@ -49,3 +75,6 @@
 	template = ~/.dotfiles/git/template.txt
 [log]
 	showSignature = false
+  decorate = true
+[status]
+	submoduleSummary = true
