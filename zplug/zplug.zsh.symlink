@@ -1,0 +1,69 @@
+autoload -U parseopts
+autoload -U zargs
+autoload -U zcalc
+autoload -U zed
+autoload -U zmv
+
+source ~/.zplug/init.zsh
+
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
+
+zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
+zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "plugins/brew",  from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "plugins/bundler",   from:oh-my-zsh
+zplug "plugins/osx",   from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "plugins/rbenv", from:oh-my-zsh
+zplug "plugins/vscode", from:oh-my-zsh
+zplug "plugins/vundl", from:oh-my-zsh
+
+# this block is in alphabetic order
+zplug "2m/zsh-jabba"
+zplug "b4b4r07/enhancd"
+zplug "caarlos0/ports"
+zplug "caarlos0/zsh-git-fetch-merge"
+zplug "caarlos0/zsh-git-sync"
+zplug "caarlos0/zsh-mkc"
+zplug "caarlos0/zsh-open-pr"
+zplug "changyuheng/fz"
+zplug "chrissicool/zsh-256color"
+zplug "gretzky/auto-color-ls"
+zplug "hschne/fzf-git"
+zplug "hcgraf/zsh-sudo"
+zplug "laggardkernel/git-ignore"
+zplug "lukechilds/zsh-nvm"
+zplug "mafredri/zsh-async"
+zplug "mdumitru/git-aliases"
+zplug "mdumitru/last-working-dir"
+zplug "MichaelAquilina/zsh-history-filter"
+zplug "rupa/z", use:z.sh
+zplug "unixorn/git-extra-commands"
+zplug "zpm-zsh/clipboard"
+zplug "zpm-zsh/colors"
+zplug "zpm-zsh/tmux"
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-autosuggestions"
+
+# these should be at last!
+zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme, defer:1
+zplug "zdharma/fast-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-history-substring-search", defer:2
+
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+SPACESHIP_PROMPT_ADD_NEWLINE="true"
+SPACESHIP_CHAR_SYMBOL=" \uf0e7"
+SPACESHIP_CHAR_PREFIX="\uf296"
+SPACESHIP_CHAR_SUFFIX=(" ")
+SPACESHIP_CHAR_COLOR_SUCCESS="yellow"
+SPACESHIP_PROMPT_DEFAULT_PREFIX="$USER"
+SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
+SPACESHIP_USER_SHOW="true"
+
+zplug load
+

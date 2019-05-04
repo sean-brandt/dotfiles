@@ -53,6 +53,7 @@ Plug 'moll/vim-bbye'
 
 " Colors
 Plug 'nikitavoloboev/vim-monokai-night'
+Plug 'dracula/vim', { 'as': 'dracula'  }
 
 call plug#end()
 
@@ -229,7 +230,8 @@ endif
 if exists('+termguicolors')
   set termguicolors
 endif
-:silent! colorscheme monokai-night
+":silent! colorscheme monokai-night
+:silent! colorscheme dracula
 "set background=dark
 " let g:hybrid_use_Xresources = 1
 " let g:rehash256 = 1
