@@ -8,11 +8,11 @@ cd "$(dirname "$0")"/..
 # find the installers and run them iteratively
 git ls-tree --name-only -r HEAD | grep install.sh | grep -v vim | while read -r installer; do
 	echo "› ${installer}..."
-	sh -c "$installer"
+	bash -c "$installer"
 done
 
 # do vim last
 git ls-tree --name-only -r HEAD | grep install.sh | grep vim | while read -r installer; do
 	echo "› ${installer}..."
-	sh -c "$installer"
+	bash -c "$installer"
 done
