@@ -4,3 +4,6 @@
 [submodule "tmux/tmux.symlink"]
 	path = tmux/tmux.symlink
 	url = git@github.com:sean-brandt/.tmux.git
+[submodule "tmux/tmux"]
+	path = tmux/tmux
+	url = git@github.com:sean-brandt/.tmux.git
