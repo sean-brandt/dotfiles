@@ -60,5 +60,15 @@
   "go.coverOnSingleTest": true,
   "terminal.integrated.cursorStyle": "line",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "go.installDependenciesWhenBuilding": false
+  "go.installDependenciesWhenBuilding": false,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "python.jediEnabled": false,
+  "team.showWelcomeMessage": false
 }
