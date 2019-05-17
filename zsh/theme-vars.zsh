@@ -1,0 +1,4 @@
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=250
+export ZSH_AUTOSUGGEST_USE_ASYNC=true
+
+export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
