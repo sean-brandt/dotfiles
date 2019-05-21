@@ -9,6 +9,8 @@ export PROJECTS="$HOME/Code"
 export EDITOR='vim'
 export VEDITOR='code'
 
+export ENHANCD_FILTER=fzy
+
 # all of our zsh files
 typeset -U config_files
 config_files=($DOTFILES/*/*.zsh)
@@ -39,6 +41,9 @@ for file in ${(M)config_files:#*/completion.zsh}; do
 done
 
 unset config_files updated_at
+
+# direnv
+eval "$(direnv hook zsh)"
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.

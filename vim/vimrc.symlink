@@ -19,6 +19,7 @@ Plug 'Raimondi/delimitMate'
 
 " fuzzy file finder
 Plug '/usr/local/opt/fzf'
+Plug '/home/linuxbrew/.linuxbrew/opt/fzf'
 
 " langs et al
 Plug 'cespare/vim-toml'
@@ -297,8 +298,11 @@ nnoremap <leader>a :cclose<CR>
 nnoremap <leader><space> :nohlsearch<CR>
 
 " Buffer prev/next
-nnoremap <C-x> :bnext<CR>
-nnoremap <C-z> :bprev<CR>
+nnoremap <C-.> :bnext<CR>
+nnoremap <C-,> :bprev<CR>
+
+" Suspend
+"nnoremap <C-z> :suspend
 
 " Better split switching
 map <C-j> <C-W>j

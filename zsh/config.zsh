@@ -82,3 +82,15 @@ if test -d /usr/local/opt/fzf/shell; then
 else
 	bindkey '^R' history-incremental-search-backward
 fi
+
+# search history with fzf if installed, default otherwise
+if test -d /home/linuxbrew/.linuxbrew/opt/fzf/shell; then
+	# shellcheck disable=SC1091
+	. /home/linuxbrew/.linuxbrew/opt/fzf/shell/key-bindings.zsh
+else
+	bindkey '^R' history-incremental-search-backward
+fi
+
+if test -d /home/linuxbrew/.linuxbrew; then
+    eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+fi
