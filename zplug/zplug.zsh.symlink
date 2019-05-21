@@ -19,7 +19,7 @@ zplug "plugins/vundl", from:oh-my-zsh
 
 # this block is in alphabetic order
 zplug "2m/zsh-jabba"
-zplug "b4b4r07/enhancd"
+zplug "b4b4r07/enhancd", use:init.sh
 zplug "caarlos0/ports"
 zplug "caarlos0/zsh-git-fetch-merge"
 zplug "caarlos0/zsh-git-sync"
@@ -27,7 +27,7 @@ zplug "caarlos0/zsh-mkc"
 zplug "caarlos0/zsh-open-pr"
 zplug "changyuheng/fz"
 zplug "chrissicool/zsh-256color"
-zplug "gretzky/auto-color-ls"
+#zplug "gretzky/auto-color-ls"
 zplug "hschne/fzf-git"
 zplug "hcgraf/zsh-sudo"
 zplug "laggardkernel/git-ignore"
@@ -43,6 +43,7 @@ zplug "zpm-zsh/colors"
 zplug "zpm-zsh/tmux"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
+zplug "~/.zsh_custom", from:local
 
 # these should be at last!
 zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme, defer:1
