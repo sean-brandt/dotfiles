@@ -2,27 +2,28 @@
   br = branch
   changed = show --pretty=\"format:\" --name-only
   ci = commit
-	co = checkout
+  co = checkout
   commend = commit --amend --no-edit
-	count = shortlog -sn
+  count = shortlog -sn
+  fa = fetch --all -p --tags
   fm = fetch-merge
   fpr = fetch-pr
-	g = grep --break --heading --line-number
-	gi = grep --break --heading --line-number -i
+  g = grep --break --heading --line-number
+  gi = grep --break --heading --line-number -i
   ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
   lt = log --tags --decorate --simplify-by-decoration --oneline
-	pr = open-pr
-	please = push --force-with-lease
-	st = status -sb
-	whatadded = log --diff-filter=A
+  pr = open-pr
+  please = push --force-with-lease
+  st = status -sb
+  whatadded = log --diff-filter=A
 [apply]
-	whitespace = nowarn
+  whitespace = nowarn
 [color]
-	diff = auto
-	status = auto
-	branch = auto
-	ui = true
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
 [color "branch"]
   current = yellow reverse
   local = yellow
@@ -37,44 +38,44 @@
   changed = green
   untracked = cyan
 [core]
-	excludesfile = ~/.gitignore
-	editor = vim
-	compression = -1
-	autocrlf = input
-	whitespace = trailing-space,space-before-tab
-	precomposeunicode = true
+  excludesfile = ~/.gitignore
+  editor = vim
+  compression = -1
+  autocrlf = input
+  whitespace = trailing-space,space-before-tab
+  precomposeunicode = true
 [branch]
-	autosetupmerge = true
-	autosetuprebase = always
+  autosetupmerge = true
+  autosetuprebase = always
 
 [github]
   user = sean-brandt
   token = ae00d4156051a23810e556e03115fa2e
 [difftool "diffmerge"]
-	cmd = diffmerge $LOCAL $REMOTE
+  cmd = diffmerge $LOCAL $REMOTE
 [help]
-	autocorrect = 1
+  autocorrect = 1
 [merge]
-	tool = diffmerge
+  tool = diffmerge
 [mergetool "diffmerge"]
-	cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
-	trustExitCode = true
-	keepBackup = false
+  cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
+  trustExitCode = true
+  keepBackup = false
 [diff]
-	tool = diffmerge
+  tool = diffmerge
 [difftool]
-	prompt = false
+  prompt = false
 [grep]
-	extendRegexp = true
-	lineNumber = true
+  extendRegexp = true
+  lineNumber = true
 [push]
-	default = simple
+  default = simple
 [submodule]
-	fetchJobs = 4
+  fetchJobs = 4
 [commit]
-	template = ~/.dotfiles/git/template.txt
+  template = ~/.dotfiles/git/template.txt
 [log]
-	showSignature = false
+  showSignature = false
   decorate = true
 [status]
-	submoduleSummary = true
+  submoduleSummary = true
