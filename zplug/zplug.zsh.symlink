@@ -16,10 +16,12 @@ zplug "plugins/osx",   from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 zplug "plugins/rbenv", from:oh-my-zsh
 zplug "plugins/vscode", from:oh-my-zsh
 zplug "plugins/vundl", from:oh-my-zsh
+zplug "plugins/kubectl", from:oh-my-zsh
 
 # this block is in alphabetic order
 zplug "2m/zsh-jabba"
 zplug "b4b4r07/enhancd", use:init.sh
+zplug "bckim92/zsh-autoswitch-conda"
 zplug "caarlos0/ports"
 zplug "caarlos0/zsh-git-fetch-merge"
 zplug "caarlos0/zsh-git-sync"
@@ -38,6 +40,7 @@ zplug "mdumitru/last-working-dir"
 zplug "MichaelAquilina/zsh-history-filter"
 zplug "rupa/z", use:z.sh
 zplug "unixorn/git-extra-commands"
+zplug "zpm-zsh/autoenv"
 zplug "zpm-zsh/clipboard"
 zplug "zpm-zsh/colors"
 zplug "zpm-zsh/tmux"
