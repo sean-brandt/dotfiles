@@ -39,7 +39,6 @@
   untracked = cyan
 [core]
   excludesfile = ~/.gitignore
-  editor = vim
   compression = -1
   autocrlf = input
   whitespace = trailing-space,space-before-tab
