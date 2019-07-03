@@ -29,6 +29,8 @@ export VEDITOR='code -nw'
 # Shell Config env
 #
 export ENHANCD_FILTER=fzy
+export ENHANCD_DISABLE_DOT=1
+export ENHANCD_DISABLE_HYPHEN=1
 
 #
 # Language
