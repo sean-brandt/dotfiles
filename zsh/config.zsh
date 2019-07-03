@@ -12,6 +12,10 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
+# Job Control
+setopt AUTO_CONTINUE
+setopt MONITOR
+
 # don't nice background tasks
 setopt NO_BG_NICE
 setopt NO_HUP
