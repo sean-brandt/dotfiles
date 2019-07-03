@@ -1,16 +1,4 @@
 #!/bin/zsh
-# shortcut to this dotfiles path is $DOTFILES
-export DOTFILES="$HOME/.dotfiles"
-
-# your project folder that we can `c [tab]` to
-export PROJECTS="$HOME/Code"
-
-# your default editor
-export EDITOR='vim'
-export VEDITOR='code'
-
-export ENHANCD_FILTER=fzy
-
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -31,8 +19,10 @@ unset __conda_setup
 typeset -U config_files
 config_files=($DOTFILES/*/*.zsh)
 
+
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}; do
+  echo "cfg: $file"
   source "$file"
 done
 

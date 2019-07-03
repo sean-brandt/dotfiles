@@ -15,28 +15,21 @@ zplug "plugins/bundler",   from:oh-my-zsh
 zplug "plugins/osx",   from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
 zplug "plugins/rbenv", from:oh-my-zsh
 zplug "plugins/vscode", from:oh-my-zsh
-zplug "plugins/vundl", from:oh-my-zsh
 zplug "plugins/kubectl", from:oh-my-zsh
 
 # this block is in alphabetic order
-zplug "2m/zsh-jabba"
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "bckim92/zsh-autoswitch-conda"
 zplug "caarlos0/ports"
-zplug "caarlos0/zsh-git-fetch-merge"
-zplug "caarlos0/zsh-git-sync"
 zplug "caarlos0/zsh-mkc"
-zplug "caarlos0/zsh-open-pr"
 zplug "changyuheng/fz"
 zplug "chrissicool/zsh-256color"
 #zplug "gretzky/auto-color-ls"
 zplug "hschne/fzf-git"
-zplug "hcgraf/zsh-sudo"
 zplug "laggardkernel/git-ignore"
 zplug "lukechilds/zsh-nvm"
-zplug "mafredri/zsh-async"
+zplug "mafredri/zsh-async", from:"github", use:"async.zsh"
 zplug "mdumitru/git-aliases"
-zplug "mdumitru/last-working-dir"
 zplug "MichaelAquilina/zsh-history-filter"
 zplug "rupa/z", use:z.sh
 zplug "unixorn/git-extra-commands"
@@ -49,7 +42,7 @@ zplug "zsh-users/zsh-autosuggestions"
 zplug "~/.zsh_custom", from:local
 
 # these should be at last!
-zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme, defer:1
+zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme, defer:1
 zplug "zdharma/fast-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:2
 
@@ -70,4 +63,5 @@ SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
 SPACESHIP_USER_SHOW="true"
 
 zplug load
+[[ -o monitor ]] && echo "Monitor enabled"
 
