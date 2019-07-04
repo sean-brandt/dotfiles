@@ -7,9 +7,9 @@ if command -v code >/dev/null; then
 	fi
 	mkdir -p "$VSCODE_HOME/User"
 
-	ln -sf "$DOTFILES/vscode/settings.json" "$VSCODE_HOME/User/settings.json"
-	ln -sf "$DOTFILES/vscode/keybindings.json" "$VSCODE_HOME/User/keybindings.json"
-	ln -sf "$DOTFILES/vscode/snippets" "$VSCODE_HOME/User/snippets"
+	ln -snf "$DOTFILES/vscode/settings.json" "$VSCODE_HOME/User/settings.json"
+	ln -snf "$DOTFILES/vscode/keybindings.json" "$VSCODE_HOME/User/keybindings.json"
+	ln -snf "$DOTFILES/vscode/snippets" "$VSCODE_HOME/User/snippets"
 
 	# from `code --list-extensions`
 	modules="
