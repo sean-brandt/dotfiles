@@ -14,6 +14,9 @@ autoload -U "$DOTFILES"/functions/*(:t)
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 
+autoload -Uz compinit
+compinit -i
+
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
