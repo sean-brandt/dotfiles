@@ -1,0 +1,75 @@
+# this block is in alphabetic order
+caarlos0/ports kind:path
+caarlos0/zsh-git-fetch-merge kind:path
+caarlos0/zsh-git-sync kind:path
+caarlos0/zsh-mkc
+caarlos0/zsh-open-pr kind:path
+mafredri/zsh-async
+robbyrussell/oh-my-zsh path:lib
+rupa/z
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+
+# these should be at last!
+sindresorhus/pure
+zdharma/fast-syntax-highlighting
+zsh-users/zsh-history-substring-search
+
+##################
+
+## zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh"
+## zplug "lib/clipboard", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+## zplug "plugins/brew",  from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+## zplug "plugins/bundler",   from:oh-my-zsh
+## zplug "plugins/osx",   from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+## zplug "plugins/rbenv", from:oh-my-zsh
+## zplug "plugins/vscode", from:oh-my-zsh
+## zplug "plugins/kubectl", from:oh-my-zsh
+
+## # this block is in alphabetic order
+## zplug "b4b4r07/enhancd", use:init.sh
+## zplug "bckim92/zsh-autoswitch-conda"
+## zplug "caarlos0/ports"
+## zplug "caarlos0/zsh-mkc"
+## zplug "changyuheng/fz"
+## zplug "chrissicool/zsh-256color"
+## #zplug "gretzky/auto-color-ls"
+## zplug "hschne/fzf-git"
+## zplug "laggardkernel/git-ignore"
+## zplug "lukechilds/zsh-nvm"
+## zplug "mafredri/zsh-async", from:"github", use:"async.zsh"
+## zplug "mdumitru/git-aliases"
+## zplug "MichaelAquilina/zsh-history-filter"
+## zplug "rupa/z", use:z.sh
+## zplug "unixorn/git-extra-commands"
+## zplug "zpm-zsh/autoenv"
+## zplug "zpm-zsh/clipboard"
+## zplug "zpm-zsh/colors"
+## zplug "zpm-zsh/tmux"
+## zplug "zsh-users/zsh-completions"
+## zplug "zsh-users/zsh-autosuggestions"
+## zplug "~/.zsh_custom", from:local
+
+## # these should be at last!
+## zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme, defer:1
+## zplug "zdharma/fast-syntax-highlighting", defer:2
+## zplug "zsh-users/zsh-history-substring-search", defer:2
+
+## if ! zplug check --verbose; then
+##     printf "Install? [y/N]: "
+##     if read -q; then
+##         echo; zplug install
+##     fi
+fi
+
+## SPACESHIP_PROMPT_ADD_NEWLINE="true"
+## SPACESHIP_CHAR_SYMBOL=" \uf0e7"
+## SPACESHIP_CHAR_PREFIX="\uf296"
+## SPACESHIP_CHAR_SUFFIX=(" ")
+## SPACESHIP_CHAR_COLOR_SUCCESS="yellow"
+## SPACESHIP_PROMPT_DEFAULT_PREFIX="$USER"
+## SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
+## SPACESHIP_USER_SHOW="true"
+
+## zplug load
+[[ -o monitor ]] && echo "Monitor enabled"

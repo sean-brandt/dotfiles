@@ -30,5 +30,11 @@ git submodule update --init --recursive --remote --merge --quiet
 echo "› $DOTFILES/script/install"
 "$DOTFILES/script/install"
 
+# Run antibody update
+if command -v antibody > /dev/null 2>&1; then
+	echo "› antibody update"
+	antibody update
+fi
+
 echo "› registering last update"
 git config --global dotfiles.lastupdate "$(date +%Y%m%d%H%M)"

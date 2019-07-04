@@ -4,6 +4,12 @@ export CLICOLOR=true
 
 fpath=($DOTFILES/functions $fpath)
 
+autoload -U parseopts
+autoload -U zargs
+autoload -U zcalc
+autoload -U zed
+autoload -U zmv
+
 autoload -U "$DOTFILES"/functions/*(:t)
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
