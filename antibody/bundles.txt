@@ -1,3 +1,6 @@
+# Do this early!
+robbyrussell/oh-my-zsh path:lib/compfix.zsh
+
 # this block is in alphabetic order
 caarlos0/ports kind:path
 caarlos0/zsh-git-fetch-merge kind:path
@@ -5,7 +8,11 @@ caarlos0/zsh-git-sync kind:path
 caarlos0/zsh-mkc
 caarlos0/zsh-open-pr kind:path
 mafredri/zsh-async
-robbyrussell/oh-my-zsh path:lib
+robbyrussell/oh-my-zsh path:lib/clipboard.zsh
+robbyrussell/oh-my-zsh path:lib/completion.zsh
+robbyrussell/oh-my-zsh path:lib/correction.zsh
+robbyrussell/oh-my-zsh path:lib/diagnostics.zsh
+robbyrussell/oh-my-zsh path:lib/key-bindings.zsh
 rupa/z
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
@@ -60,7 +67,7 @@ zsh-users/zsh-history-substring-search
 ##     if read -q; then
 ##         echo; zplug install
 ##     fi
-fi
+## fi
 
 ## SPACESHIP_PROMPT_ADD_NEWLINE="true"
 ## SPACESHIP_CHAR_SYMBOL=" \uf0e7"
@@ -72,4 +79,4 @@ fi
 ## SPACESHIP_USER_SHOW="true"
 
 ## zplug load
-[[ -o monitor ]] && echo "Monitor enabled"
+#[[ -o monitor ]] && echo "Monitor enabled"
