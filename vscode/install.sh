@@ -34,6 +34,7 @@ rust-lang.rust
 shanoor.vscode-nginx
 timonwong.shellcheck
 wmaurer.change-case
+chrislajoie.vscode-modelines
 "
 	for module in $modules; do
 		code --install-extension "$module" || true
