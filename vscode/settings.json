@@ -76,5 +76,6 @@
   "gitlens.views.lineHistory.location": "explorer",
   "gitlens.views.compare.location": "gitlens",
   "gitlens.views.search.location": "gitlens",
-  "gitlens.keymap": "alternate"
+  "gitlens.keymap": "alternate",
+  "terminal.integrated.shell.linux": "/home/linuxbrew/.linuxbrew/bin/zsh"
 }
