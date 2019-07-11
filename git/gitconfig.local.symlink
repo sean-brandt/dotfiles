@@ -43,6 +43,7 @@
   autocrlf = input
   whitespace = trailing-space,space-before-tab
   precomposeunicode = true
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [branch]
   autosetupmerge = true
   autosetuprebase = always
