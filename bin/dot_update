@@ -27,10 +27,12 @@ echo "› $DOTFILES/script/install"
 "$DOTFILES/script/install"
 
 # Run antibody update
-if command -v antibody > /dev/null 2>&1; then
-	echo "› antibody update"
-	antibody update
-fi
+echo "› antibody update"
+antibody update
+
+
+echo "› update compinit"
+compinit -i
 
 echo "› registering last update"
 git config --global dotfiles.lastupdate "$(date +%Y%m%d%H%M)"
