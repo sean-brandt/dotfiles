@@ -77,5 +77,6 @@
   "gitlens.views.compare.location": "gitlens",
   "gitlens.views.search.location": "gitlens",
   "gitlens.keymap": "alternate",
-  "terminal.integrated.shell.linux": "/home/linuxbrew/.linuxbrew/bin/zsh"
+  "terminal.integrated.shell.linux": "/home/linuxbrew/.linuxbrew/bin/zsh",
+  "vsicons.dontShowNewVersionMessage": true
 }
