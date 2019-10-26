@@ -11,6 +11,7 @@ caarlos0/zsh-git-fetch-merge kind:path
 caarlos0/zsh-git-sync kind:path
 caarlos0/zsh-mkc
 caarlos0/zsh-open-pr kind:path
+dbz/kube-aliases
 laggardkernel/git-ignore
 lukechilds/zsh-nvm
 mafredri/zsh-async

@@ -24,6 +24,8 @@ else
   compinit -C -i
 fi
 
+eval "$(rbenv init -)"
+
 source ~/.zsh_plugins.sh
 
 # load every completion after autocomplete loads
@@ -38,3 +40,13 @@ unset config_files updated_at
 # shellcheck disable=SC1090
 [ -f ~/.localrc ] && . ~/.localrc
 
+
+# added by travis gem
+[ -f /Users/sean/.travis/travis.sh ] && source /Users/sean/.travis/travis.sh
+
+
+function opcred () {
+  des="${1}"
+  name="${2}"
+  op get item "${name}" | jq -cr ".details.fields[] | select(.designation == \"${des}\") | .value"
+}
