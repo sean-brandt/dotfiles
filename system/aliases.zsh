@@ -1,16 +1,25 @@
 #!/bin/sh
-if [ "$(uname -s)" = "Darwin" ]; then
+if [ -n "$(command -v exa)" ]; then
+    alias ls='exa -F --group-directories-first'
+    alias l='exa -F --group-directories-first'
+    alias ll='exa -lF --git --group-directories-first'
+    alias la='exa -alrF --git --group-directories-first'
+    alias lg='exa -TF'
+elif [ "$(uname -s)" = "Darwin" ]; then
 	alias ls="ls -FG"
+    alias l="ls -lAh"
+    alias la="ls -A"
+    alias ll="ls -l"
 else
 	alias ls="ls -F --color"
+    alias l="ls -lAh"
+    alias la="ls -A"
+    alias ll="ls -l"
 fi
-alias l="ls -lAh"
-alias la="ls -A"
-alias ll="ls -l"
 
 alias grep="grep --color=auto"
 alias duf="du -sh * | sort -hr"
-alias less="less -r"
+alias less="less -RFX"
 
 alias croot='cd "$(git rev-parse --show-toplevel)"'
 
