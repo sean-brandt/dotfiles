@@ -19,7 +19,7 @@ fi
 
 # Update repo
 echo "› git update"
-git pull --rebase --stat "$(git rev-parse --abbrev-ref HEAD)"
+git pull --rebase --stat origin "$(git rev-parse --abbrev-ref HEAD)"
 
 # Update submodules
 echo "› submodules update"
