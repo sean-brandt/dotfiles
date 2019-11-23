@@ -96,7 +96,7 @@ defaults write NSGlobalDomain AppleHighlightColor -string "0.847059 0.847059 0.8
 echo "  › Show battery percent"
 defaults write com.apple.menuextra.battery ShowPercent -bool true
 
-if [ ! -z "$TRAVIS_JOB_ID" ]; then
+if [ -n "$TRAVIS_JOB_ID" ]; then
 	echo "  › Speed up wake from sleep to 24 hours from an hour"
 	# http://www.cultofmac.com/221392/quick-hack-speeds-up-retina-macbooks-wake-from-sleep-os-x-tips/
 	sudo pmset -a standbydelay 86400
@@ -169,8 +169,8 @@ defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 
 echo ""
 echo "› Dock"
-echo "  › Setting the icon size of Dock items to 36 pixels for optimal size/screen-realestate"
-defaults write com.apple.dock tilesize -int 36
+echo "  › Setting the icon size of Dock items to 45 pixels for optimal size/screen-realestate"
+defaults write com.apple.dock tilesize -int 45
 
 echo "  › Speeding up Mission Control animations and grouping windows by application"
 defaults write com.apple.dock expose-animation-duration -float 0.1
@@ -263,7 +263,7 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
-if [ ! -z "$TRAVIS_JOB_ID" ] && diskutil info disk0 | grep SSD >/dev/null 2>&1; then
+if [ -n "$TRAVIS_JOB_ID" ] && diskutil info disk0 | grep SSD >/dev/null 2>&1; then
 	echo "  › Disable local backups"
 	# https://classicyuppie.com/what-crap-is-this-os-xs-mobilebackups/
 	sudo tmutil disablelocal

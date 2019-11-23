@@ -47,10 +47,6 @@ For macOS, I recommend:
 
 - iTerm: a better terminal emulator;
 
-For Linux:
-
-- Terminator: a better terminal emulator;
-
 For both Linux and macOS:
 
 - [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy):
@@ -72,7 +68,8 @@ And logging out and in again/restart.
 
 ### Themes and fonts being used
 
-Theme is **Monokai Night** and the font is **Fura Code Mono Retina**.
+Theme is **[Dracula](https://draculatheme.com)** and the font is
+**Source Code Pro Light**.
 
 ## Further help:
 

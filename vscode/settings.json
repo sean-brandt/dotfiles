@@ -1,5 +1,6 @@
 {
   "editor.fontSize": 15,
+  "editor.formatOnSave": true,
   "editor.rulers": [
     80,
     120
@@ -17,7 +18,7 @@
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "files.trimTrailingWhitespace": true,
   "editor.minimap.enabled": false,
-  "editor.renderWhitespace": "all",
+  "editor.renderWhitespace": "none",
   "workbench.colorTheme": "Dracula",
   "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
@@ -31,12 +32,9 @@
   },
   "workbench.startupEditor": "newUntitledFile",
   "workbench.fontAliasing": "auto",
-  "docker.showExplorer": false,
   "workbench.editor.showIcons": true,
   "explorer.confirmDragAndDrop": false,
   "search.smartCase": true,
-  "editor.fontFamily": "FuraCode Nerd Font Mono Retina, Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontLigatures": true,
   "files.associations": {
     "*.tmpl": "gotemplate"
   },
@@ -44,6 +42,8 @@
   "breadcrumbs.enabled": true,
   "telemetry.enableTelemetry": false,
   "terraform.telemetry.enabled": false,
+  "terraform.indexing.enabled": false,
+  "terraform.languageServer.enabled": true,
   "telemetry.enableCrashReporter": false,
   "go.useCodeSnippetsOnFunctionSuggest": true,
   "go.formatTool": "goimports",
@@ -60,23 +60,21 @@
   "go.coverOnSingleTest": true,
   "terminal.integrated.cursorStyle": "line",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "go.installDependenciesWhenBuilding": false,
-  "files.exclude": {
-    "**/.classpath": true,
-    "**/.project": true,
-    "**/.settings": true,
-    "**/.factorypath": true
+  "go.useLanguageServer": false,
+  "go.alternateTools": {
+    "go-langserver": "gopls"
   },
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "python.jediEnabled": false,
-  "team.showWelcomeMessage": false,
-  "gitlens.views.repositories.location": "scm",
-  "gitlens.views.fileHistory.location": "explorer",
-  "gitlens.views.lineHistory.location": "explorer",
-  "gitlens.views.compare.location": "gitlens",
-  "gitlens.views.search.location": "gitlens",
-  "gitlens.keymap": "alternate",
-  "vsicons.dontShowNewVersionMessage": true,
-  "remote.SSH.configFile": "/Users/sean/.ssh/config"
+  "go.languageServerExperimentalFeatures": {
+    "format": true,
+    "autoComplete": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "window.newWindowDimensions": "maximized",
+  "go.buildFlags": [
+    "-v"
+  ],
+  "editor.fontFamily": "Source Code Pro, Menlo, Monaco, 'Courier New', monospace",
+  "editor.smoothScrolling": true
 }

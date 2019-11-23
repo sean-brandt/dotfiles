@@ -1,15 +1,25 @@
 #!/bin/zsh
+# uncomment this and the last line for zprof info
+# zmodload zsh/zprof
+
+# shortcut to this dotfiles path is $DOTFILES
+export DOTFILES="$HOME/.dotfiles"
+
+# your project folder that we can `c [tab]` to
+export PROJECTS="$HOME/Code"
+
+# your default editor
+export EDITOR='vim'
+export VEDITOR='code'
 
 # all of our zsh files
 typeset -U config_files
 config_files=($DOTFILES/*/*.zsh)
 
-
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}; do
   source "$file"
 done
-
 
 # load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}; do
@@ -18,14 +28,15 @@ done
 
 autoload -Uz compinit
 typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
-if [ $(date +'%j') != $updated_at ]; then
-  compinit -i
-else
-  compinit -C -i
+if [ $(date +'%j') != $updated_at  ]; then
+    compinit -i
+  else
+    compinit -C -i
 fi
 
 eval "$(rbenv init -)"
 
+# load antibody plugins
 source ~/.zsh_plugins.sh
 
 # load every completion after autocomplete loads
@@ -50,3 +61,5 @@ function opcred () {
   name="${2}"
   op get item "${name}" | jq -cr ".details.fields[] | select(.designation == \"${des}\") | .value"
 }
+
+# zprof
