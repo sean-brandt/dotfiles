@@ -34,7 +34,7 @@ unixorn/git-extra-commands
 zpm-zsh/autoenv
 zpm-zsh/clipboard
 zpm-zsh/colors
-zpm-zsh/tmux
+#zpm-zsh/tmux
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
 

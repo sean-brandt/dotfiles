@@ -2,7 +2,8 @@
   "editor.fontSize": 15,
   "editor.rulers": [
     80,
-    120
+    120,
+    160
   ],
   "editor.tabSize": 4,
   "editor.trimAutoWhitespace": true,
@@ -35,7 +36,7 @@
   "workbench.editor.showIcons": true,
   "explorer.confirmDragAndDrop": false,
   "search.smartCase": true,
-  "editor.fontFamily": "FuraCode Nerd Font Mono Retina, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "files.associations": {
     "*.tmpl": "gotemplate"
@@ -78,5 +79,15 @@
   "gitlens.views.search.location": "gitlens",
   "gitlens.keymap": "alternate",
   "terminal.integrated.shell.linux": "/home/linuxbrew/.linuxbrew/bin/zsh",
-  "vsicons.dontShowNewVersionMessage": true
+  "vsicons.dontShowNewVersionMessage": true,
+  "terminal.integrated.fontFamily": "JetBrains Mono for Powerline",
+  "workbench.iconTheme": "vscode-icons",
+  "git.autofetch": true,
+  "sync.ignoredExtensions": [],
+  "sync.ignoredSettings": [],
+  "editor.columnSelection": false,
+  "editor.formatOnSave": true,
+  "git.autoStash": true,
+  "git.fetchOnPull": true,
+  "git-graph.dateFormat": "ISO Date & Time"
 }
