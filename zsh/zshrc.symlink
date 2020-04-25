@@ -63,3 +63,7 @@ function opcred () {
 }
 
 # zprof
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/sean/.sdkman"
+[[ -s "/Users/sean/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/sean/.sdkman/bin/sdkman-init.sh"

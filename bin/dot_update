@@ -39,3 +39,5 @@ compinit -i
 
 echo "› registering last update"
 git config --global dotfiles.lastupdate "$(date +%Y%m%d%H%M)"
+
+reset

@@ -19,7 +19,7 @@
   "files.trimTrailingWhitespace": true,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "none",
-  "workbench.colorTheme": "Dracula",
+  "workbench.colorTheme": "Dracula Pro",
   "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
   "go.coverageDecorator": {
@@ -75,6 +75,24 @@
   "go.buildFlags": [
     "-v"
   ],
-  "editor.fontFamily": "Source Code Pro, Menlo, Monaco, 'Courier New', monospace",
-  "editor.smoothScrolling": true
+  "editor.fontFamily": "JetBrains Mono,Source Code Pro, Menlo, Monaco, 'Courier New', monospace",
+  "editor.smoothScrolling": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.iconTheme": "vscode-icons",
+  "sync.gist": "dbd294a765364916aa4199338f465d3f",
+  "sync.autoUpload": true,
+  "sync.forceUpload": false,
+  "sync.autoDownload": true,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "terminal.integrated.fontFamily": "JetBrains Mono for Powerline",
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  }
 }
