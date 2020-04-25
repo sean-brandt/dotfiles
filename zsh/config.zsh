@@ -16,11 +16,18 @@ autoload -U down-line-or-beginning-search
 autoload -U edit-command-line
 
 autoload -Uz compinit
-compinit -i
+typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
+if [ $(date +'%j') != $updated_at ]; then
+  compinit -i
+else
+  compinit -C -i
+fi
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
+
+setopt AUTO_CD
 
 # Job Control
 setopt AUTO_CONTINUE
@@ -60,6 +67,9 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 zle -N edit-command-line
 
+# set emacs mode
+bindkey -e
+
 # fuzzy find: start to type
 bindkey "$terminfo[kcuu1]" up-line-or-beginning-search
 bindkey "$terminfo[kcud1]" down-line-or-beginning-search
@@ -87,24 +97,16 @@ bindkey '^[[3;5~' backward-delete-word
 # bindkey '^[[3~' backward-delete-word
 
 # edit command line in $EDITOR
-bindkey '^e' edit-command-line
+bindkey '^[^e' edit-command-line
 
 # search history with fzf if installed, default otherwise
-if test -d /usr/local/opt/fzf/shell; then
-	# shellcheck disable=SC1091
-	. /usr/local/opt/fzf/shell/key-bindings.zsh
+if [ -f $(brew --prefix)/opt/fzf/shell/key-bindings.zsh ]; then
+  # shellcheck disable=SC1091
+  . $(brew --prefix)/opt/fzf/shell/key-bindings.zsh
 else
-	bindkey '^R' history-incremental-search-backward
+  bindkey '^R' history-incremental-search-backward
 fi
 
-# search history with fzf if installed, default otherwise
-if test -d /home/linuxbrew/.linuxbrew/opt/fzf/shell; then
-	# shellcheck disable=SC1091
-	. /home/linuxbrew/.linuxbrew/opt/fzf/shell/key-bindings.zsh
-else
-	bindkey '^R' history-incremental-search-backward
-fi
-
-if test -d /home/linuxbrew/.linuxbrew; then
-    eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+if [ -d /home/linuxbrew/.linuxbrew ]; then
+  eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 fi

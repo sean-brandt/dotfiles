@@ -32,7 +32,7 @@ export VISUAL="$(command -v ${code}) -nw"
 #
 # Shell Config env
 #
-export ENHANCD_FILTER=fzy
+export ENHANCD_FILTER=fzf
 export ENHANCD_DISABLE_DOT=1
 export ENHANCD_DISABLE_HYPHEN=1
 
@@ -79,4 +79,5 @@ export LESS='-F -g -i -M -R -S -w -X -z-4'
 if (( $#commands[(i)lesspipe(|.sh)] )); then
   export LESSOPEN="| /usr/bin/env $commands[(i)lesspipe(|.sh)] %s 2>&-"
 fi
+
 

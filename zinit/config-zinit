@@ -1,0 +1,53 @@
+#!/usr/bin/env zsh
+
+zinit light zinit-zsh/z-a-bin-gem-node
+zinit light zinit-zsh/z-a-as-monitor
+zinit light zinit-zsh/z-a-submods
+
+zinit ice atpull="!git reset --hard"
+zinit load b4b4r07/enhancd
+
+zinit for \
+    light-mode changyuheng/fz \
+    light-mode chrissicool/zsh-256color \
+    light-mode bckim92/zsh-autoswitch-conda \
+    light-mode laggardkernel/git-ignore \
+    light-mode lukechilds/zsh-nvm \
+    light-mode MichaelAquilina/zsh-history-filter \
+    light-mode wait lucid atload='_zsh_autosuggest_start' zsh-users/zsh-autosuggestions \
+    light-mode zdharma/fast-syntax-highlighting \
+    light-mode unixorn/git-extra-commands \
+    light-mode zpm-zsh/autoenv \
+    light-mode zpm-zsh/clipboard \
+    light-mode zpm-zsh/colorize \
+    light-mode zpm-zsh/colors \
+    light-mode olets/zsh-abbr \
+    light-mode wolffaxn/brew-zsh-plugin \
+    light-mode hschne/fzf-git \
+    light-mode andrewferrier/fzf-z \
+    light-mode Aloxaf/fzf-tab \
+    light-mode mdumitru/git-aliases \
+    light-mode reegnz/jq-zsh-plugin \
+    light-mode droctothorpe/kubecolor \
+    light-mode ELLIOTTCABLE/rbenv.plugin.zsh \
+    light-mode hcgraf/zsh-sudo \
+    light-mode lukechilds/zsh-nvm \
+    light-mode zsh-users/zsh-history-substring-search \
+    from="gh-r" mv="exa* -> exa" fbin ogham/exa \
+    DarrinTisdale/zsh-aliases-exa
+# wait lucid load='![[ "${KUBERNETES_MASTER}x" != "x" ]]' unload='[[ -z "${KUBERNETES_MASTER}" ]]' unixorn/kubectx-zshplugin
+
+zinit ice wait lucid
+zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
+
+zinit ice from="gh-r" fbin="fzf" wait lucid
+zinit load junegunn/fzf-bin
+
+zinit ice wait lucid
+zinit load rupa/z
+
+zplugin ice as"program" pick"bin/git-dsf" wait lucid
+zplugin load zdharma/zsh-diff-so-fancy
+
+zinit ice pick="async.zsh" src="pure.zsh"
+zinit load sindresorhus/pure
