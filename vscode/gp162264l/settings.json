@@ -89,5 +89,8 @@
   "editor.formatOnSave": true,
   "git.autoStash": true,
   "git.fetchOnPull": true,
-  "git-graph.dateFormat": "ISO Date & Time"
+  "git-graph.dateFormat": "ISO Date & Time",
+  "shellcheck.ignorePatterns": {
+    ".zshrc": true
+  }
 }
