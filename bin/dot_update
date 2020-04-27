@@ -29,9 +29,9 @@ git submodule update --init --recursive --remote --merge --quiet
 echo "› $DOTFILES/script/install"
 "$DOTFILES/script/install"
 
-# Run antibody update
-echo "› antibody update"
-antibody update
+# Run zinit update
+echo "› zinit update"
+zinit update --all
 
 
 echo "› update compinit"

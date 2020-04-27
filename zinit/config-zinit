@@ -37,7 +37,7 @@ zinit for \
     DarrinTisdale/zsh-aliases-exa
 # wait lucid load='![[ "${KUBERNETES_MASTER}x" != "x" ]]' unload='[[ -z "${KUBERNETES_MASTER}" ]]' unixorn/kubectx-zshplugin
 
-zinit ice wait lucid
+zinit ice lucid
 zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
 
 zinit ice from="gh-r" fbin="fzf" wait lucid
