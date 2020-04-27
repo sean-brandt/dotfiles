@@ -8,31 +8,31 @@ zinit ice atpull="!git reset --hard"
 zinit load b4b4r07/enhancd
 
 zinit for \
-    light-mode changyuheng/fz \
-    light-mode chrissicool/zsh-256color \
-    light-mode bckim92/zsh-autoswitch-conda \
-    light-mode laggardkernel/git-ignore \
-    light-mode lukechilds/zsh-nvm \
-    light-mode MichaelAquilina/zsh-history-filter \
-    light-mode wait lucid atload='_zsh_autosuggest_start' zsh-users/zsh-autosuggestions \
-    light-mode zdharma/fast-syntax-highlighting \
-    light-mode unixorn/git-extra-commands \
-    light-mode zpm-zsh/autoenv \
-    light-mode zpm-zsh/clipboard \
-    light-mode zpm-zsh/colorize \
-    light-mode zpm-zsh/colors \
-    light-mode olets/zsh-abbr \
-    light-mode wolffaxn/brew-zsh-plugin \
-    light-mode hschne/fzf-git \
-    light-mode andrewferrier/fzf-z \
-    light-mode Aloxaf/fzf-tab \
-    light-mode mdumitru/git-aliases \
-    light-mode reegnz/jq-zsh-plugin \
-    light-mode droctothorpe/kubecolor \
-    light-mode ELLIOTTCABLE/rbenv.plugin.zsh \
-    light-mode hcgraf/zsh-sudo \
-    light-mode lukechilds/zsh-nvm \
-    light-mode zsh-users/zsh-history-substring-search \
+    changyuheng/fz \
+    chrissicool/zsh-256color \
+    bckim92/zsh-autoswitch-conda \
+    laggardkernel/git-ignore \
+    lukechilds/zsh-nvm \
+    MichaelAquilina/zsh-history-filter \
+    wait lucid atload='_zsh_autosuggest_start' zsh-users/zsh-autosuggestions \
+    zdharma/fast-syntax-highlighting \
+    unixorn/git-extra-commands \
+    zpm-zsh/autoenv \
+    zpm-zsh/clipboard \
+    zpm-zsh/colorize \
+    zpm-zsh/colors \
+    olets/zsh-abbr \
+    wolffaxn/brew-zsh-plugin \
+    hschne/fzf-git \
+    andrewferrier/fzf-z \
+    Aloxaf/fzf-tab \
+    mdumitru/git-aliases \
+    reegnz/jq-zsh-plugin \
+    droctothorpe/kubecolor \
+    ELLIOTTCABLE/rbenv.plugin.zsh \
+    hcgraf/zsh-sudo \
+    lukechilds/zsh-nvm \
+    zsh-users/zsh-history-substring-search \
     from="gh-r" mv="exa* -> exa" fbin ogham/exa \
     DarrinTisdale/zsh-aliases-exa
 # wait lucid load='![[ "${KUBERNETES_MASTER}x" != "x" ]]' unload='[[ -z "${KUBERNETES_MASTER}" ]]' unixorn/kubectx-zshplugin
@@ -48,6 +48,9 @@ zinit load rupa/z
 
 zplugin ice as"program" pick"bin/git-dsf" wait lucid
 zplugin load zdharma/zsh-diff-so-fancy
+
+zinit ice as"program" pick"$ZPFX/bin/git-*" make"PREFIX=$ZPFX" wait lucid src="etc/git-extras-completion.zsh"
+zinit light tj/git-extras
 
 zinit ice pick="async.zsh" src="pure.zsh"
 zinit load sindresorhus/pure
