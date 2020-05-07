@@ -65,6 +65,11 @@ path=(
   $path
 )
 
+[[ -d /home/linuxbrew/.linuxbrew/bin ]] && path=(
+  /home/linuxbrew/.linuxbrew/{bin,sbin}
+  $path
+)
+
 #
 # Less
 #

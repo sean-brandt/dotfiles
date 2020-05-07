@@ -1,11 +1,9 @@
 #!/usr/bin/env zsh
 
-zinit light zinit-zsh/z-a-bin-gem-node
-zinit light zinit-zsh/z-a-as-monitor
 zinit light zinit-zsh/z-a-submods
 
 zinit ice atpull="!git reset --hard"
-zinit load b4b4r07/enhancd
+zinit load sean-brandt/enhancd
 
 zinit for \
     changyuheng/fz \
@@ -14,8 +12,6 @@ zinit for \
     laggardkernel/git-ignore \
     lukechilds/zsh-nvm \
     MichaelAquilina/zsh-history-filter \
-    wait lucid atload='_zsh_autosuggest_start' zsh-users/zsh-autosuggestions \
-    zdharma/fast-syntax-highlighting \
     unixorn/git-extra-commands \
     zpm-zsh/autoenv \
     zpm-zsh/clipboard \
@@ -32,6 +28,7 @@ zinit for \
     ELLIOTTCABLE/rbenv.plugin.zsh \
     hcgraf/zsh-sudo \
     lukechilds/zsh-nvm \
+    hlissner/zsh-autopair \
     zsh-users/zsh-history-substring-search \
     from="gh-r" mv="exa* -> exa" fbin ogham/exa \
     DarrinTisdale/zsh-aliases-exa
@@ -46,11 +43,32 @@ zinit load junegunn/fzf-bin
 zinit ice wait lucid
 zinit load rupa/z
 
-zplugin ice as"program" pick"bin/git-dsf" wait lucid
-zplugin load zdharma/zsh-diff-so-fancy
+zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat"
+zinit light sharkdp/bat
+alias more="bat"
+alias less="bat"
+alias cat="bat"
+
+zinit ice as"command" from"gh-r" mv"ripgrep* -> rg" pick"rg/rg"
+zinit light BurntSushi/ripgrep
+
+zinit ice as"program" from"gh-r" mv"delta* -> delta" pick"delta/delta"
+zinit light dandavison/delta
+git config --global core.pager "delta --dark --hunk-style=plain"
 
 zinit ice as"program" pick"$ZPFX/bin/git-*" make"PREFIX=$ZPFX" wait lucid src="etc/git-extras-completion.zsh"
 zinit light tj/git-extras
 
+zinit ice wait"1" lucid atinit"zpcompinit; zpcdreplay" atload"FAST_HIGHLIGHT[chroma-git]=\"chroma/-ogit.ch\""
+zinit light zdharma/fast-syntax-highlighting
+
+zinit ice wait"1" lucid atload"!_zsh_autosuggest_start"
+zinit load zsh-users/zsh-autosuggestions
+
+zinit add-fpath -f ~/.zsh_custom/functions
+for i in ~/.zsh_custom/functions/*; do autoload -Uz $(basename $i); done
+
 zinit ice pick="async.zsh" src="pure.zsh"
 zinit load sindresorhus/pure
+
+

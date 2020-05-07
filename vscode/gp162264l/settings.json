@@ -92,5 +92,6 @@
   "git-graph.dateFormat": "ISO Date & Time",
   "shellcheck.ignorePatterns": {
     ".zshrc": true
-  }
+  },
+  "java.semanticHighlighting.enabled": true
 }
