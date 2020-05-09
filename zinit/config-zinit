@@ -1,6 +1,12 @@
 #!/usr/bin/env zsh
 
-zinit light zinit-zsh/z-a-submods
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zinit-zsh/z-a-patch-dl \
+    zinit-zsh/z-a-as-monitor \
+    zinit-zsh/z-a-bin-gem-node \
+    zinit-zsh/z-a-submods
 
 zinit ice atpull="!git reset --hard"
 zinit load sean-brandt/enhancd
@@ -30,15 +36,16 @@ zinit for \
     lukechilds/zsh-nvm \
     hlissner/zsh-autopair \
     zsh-users/zsh-history-substring-search \
-    from="gh-r" mv="exa* -> exa" fbin ogham/exa \
-    DarrinTisdale/zsh-aliases-exa
+    from="gh-r" mv="exa* -> exa" ogham/exa
 # wait lucid load='![[ "${KUBERNETES_MASTER}x" != "x" ]]' unload='[[ -z "${KUBERNETES_MASTER}" ]]' unixorn/kubectx-zshplugin
 
 zinit ice lucid
 zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
 
-zinit ice from="gh-r" fbin="fzf" wait lucid
-zinit load junegunn/fzf-bin
+#zinit ice from="gh-r" fbin="fzf" wait lucid
+#zinit load junegunn/fzf-bin
+zinit pack="bgn+keys" for fzf
+zinit pack for ls_colors
 
 zinit ice wait lucid
 zinit load rupa/z
@@ -66,7 +73,7 @@ zinit ice wait"1" lucid atload"!_zsh_autosuggest_start"
 zinit load zsh-users/zsh-autosuggestions
 
 zinit add-fpath -f ~/.zsh_custom/functions
-for i in ~/.zsh_custom/functions/*; do autoload -Uz $(basename $i); done
+[[ -d ~/.zsh_custom/functions ]] && for i in ~/.zsh_custom/functions/*; do autoload -Uz $(basename $i); done
 
 zinit ice pick="async.zsh" src="pure.zsh"
 zinit load sindresorhus/pure

@@ -6,4 +6,7 @@ else
     HOMEBREW_NO_AUTO_UPDATE=1 brew install fasd
 fi
 
-exec sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+if [ ! -d ~/.zinit/bin  ] ; then
+    mkdir ~/.zinit
+    git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
+fi

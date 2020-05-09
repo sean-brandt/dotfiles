@@ -1,10 +1,15 @@
 #!/bin/sh
 if [ -n "$(command -v exa)" ]; then
     alias ls='exa -F --group-directories-first'
-    alias l='exa -F --group-directories-first'
-    alias ll='exa -lF --git --group-directories-first'
-    alias la='exa -alrF --git --group-directories-first'
+    alias l='exa -lbF --group-directories-first'
+    alias ll='exa -lbGF --git --group-directories-first'
+	alias llm='exa -lbGd --git --sort=modified'                            # long list, modified date sort
+	alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
     alias lg='exa -TF'
+	alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
+	alias lS='exa -1'                                                              # one column, just names
+	alias lt='exa --tree --level=2'                                         # tree
+
 elif [ "$(uname -s)" = "Darwin" ]; then
 	alias ls="ls -FG"
     alias l="ls -lAh"
@@ -19,7 +24,6 @@ fi
 
 alias grep="grep --color=auto"
 alias duf="du -sh * | sort -hr"
-alias less="less -RFX"
 
 alias croot='cd "$(git rev-parse --show-toplevel)"'
 
