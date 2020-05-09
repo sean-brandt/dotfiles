@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+# -*- mode: sh; sh-indentation: 4; indent-tabs-mode: nil; sh-basic-offset: 4; -*-
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
@@ -36,7 +37,8 @@ zinit for \
     lukechilds/zsh-nvm \
     hlissner/zsh-autopair \
     zsh-users/zsh-history-substring-search \
-    from="gh-r" mv="exa* -> exa" ogham/exa
+    from="gh-r" mv="exa* -> exa" ogham/exa \
+    sean-brandt/zsh-aliases
 # wait lucid load='![[ "${KUBERNETES_MASTER}x" != "x" ]]' unload='[[ -z "${KUBERNETES_MASTER}" ]]' unixorn/kubectx-zshplugin
 
 zinit ice lucid

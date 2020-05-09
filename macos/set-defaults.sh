@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/usr/bin/env zsh
+# -*- mode: sh; sh-indentation: 4; indent-tabs-mode: nil; sh-basic-offset: 4; -*-
+#
 # Sets reasonable macOS defaults.
 #
 # Or, in other words, set shit how I like in macOS.

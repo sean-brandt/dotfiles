@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/usr/bin/env zsh
+# -*- mode: sh; sh-indentation: 4; indent-tabs-mode: nil; sh-basic-offset: 4; -*-
 install() {
 	curl -L -s -o "$1/SourceCodePro-Light.ttf" \
 		https://github.com/adobe-fonts/source-code-pro/raw/release/TTF/SourceCodePro-Light.ttf

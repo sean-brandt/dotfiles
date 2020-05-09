@@ -1,4 +1,5 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
+# -*- mode: sh; sh-indentation: 4; indent-tabs-mode: nil; sh-basic-offset: 4;
 
 if command -v brew >/dev/null 2>&1; then
     brew install rbenv rbenv-aliases rbenv-binstubs rbenv-bundle-exec ruby-build

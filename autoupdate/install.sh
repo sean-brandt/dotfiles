@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/usr/bin/env zsh
+# -*- mode: sh; sh-indentation: 4; indent-tabs-mode: nil; sh-basic-offset: 4; -*-
 # setups the auto-update
 (
 	crontab -l | grep -v "dot_update"

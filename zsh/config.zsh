@@ -99,14 +99,6 @@ bindkey '^[[3;5~' backward-delete-word
 # edit command line in $EDITOR
 bindkey '^[^e' edit-command-line
 
-# search history with fzf if installed, default otherwise
-if [ -f $(brew --prefix)/opt/fzf/shell/key-bindings.zsh ]; then
-  # shellcheck disable=SC1091
-  . $(brew --prefix)/opt/fzf/shell/key-bindings.zsh
-else
-  bindkey '^R' history-incremental-search-backward
-fi
-
 if [ -d /home/linuxbrew/.linuxbrew ]; then
   eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 fi

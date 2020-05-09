@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/usr/bin/env zsh
+# -*- mode: sh; sh-indentation: 4; indent-tabs-mode: nil; sh-basic-offset: 4; -*-
 if command -v code >/dev/null; then
     if [ "$(uname -s)" = "Darwin" ]; then
         VSCODE_HOME="$HOME/Library/Application Support/Code"
