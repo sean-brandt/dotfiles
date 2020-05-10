@@ -21,3 +21,6 @@ git ls-tree --name-only -r HEAD | grep install.sh | grep vim | while read -r ins
 	echo "› ${installer}..."
 	zsh -c "$installer"
 done
+
+reset
+
