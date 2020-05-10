@@ -45,9 +45,9 @@ zinit for \
 zinit ice lucid wait
 zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
 zinit ice lucid wait as="completion"
-zinit snippet OMZ::plugins/docker/_docker
+zinit snippet https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker/_docker
 zinit ice lucid wait as="completion"
-zinit snippet OMZ::plugins/docker-compose/_docker-compose
+zinit snippet https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker-compose/_docker-compose
 zinit ice lucid wait as="completion"
 zinit snippet https://github.com/gradle/gradle-completion/blob/master/_gradle
 zinit ice lucid wait as="completion"
@@ -59,7 +59,8 @@ zinit pack="bgn+keys" for fzf
 zinit pack for ls_colors
 
 zinit ice wait lucid
-zinit load rupa/z
+#zinit load rupa/z
+zinit load agkozak/zsh-z
 
 zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat"
 zinit light sharkdp/bat
