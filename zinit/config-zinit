@@ -39,6 +39,7 @@ zinit for \
     zsh-users/zsh-history-substring-search \
     sirhc/op.plugin.zsh \
     from="gh-r" mv="exa* -> exa" sbin ogham/exa \
+    zpm-zsh/tmux \
     sean-brandt/zsh-aliases
 # wait lucid load='![[ "${KUBERNETES_MASTER}x" != "x" ]]' unload='[[ -z "${KUBERNETES_MASTER}" ]]' unixorn/kubectx-zshplugin
 

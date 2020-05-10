@@ -28,6 +28,11 @@ done
 
 eval "$(rbenv init -)"
 
+# use .localrc for SUPER SECRET CRAP that you don't
+# want in your public, versioned repo.
+# shellcheck disable=SC1090
+[ -f ~/.localrc ] && . ~/.localrc
+
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
@@ -51,11 +56,6 @@ for file in ${(M)config_files:#*/completion.zsh}; do
 done
 
 unset config_files updated_at
-
-# use .localrc for SUPER SECRET CRAP that you don't
-# want in your public, versioned repo.
-# shellcheck disable=SC1090
-[ -f ~/.localrc ] && . ~/.localrc
 
 
 # added by travis gem
