@@ -11,9 +11,6 @@ caarlos0/zsh-git-fetch-merge kind:path
 caarlos0/zsh-git-sync kind:path
 caarlos0/zsh-mkc
 caarlos0/zsh-open-pr kind:path
-docker/cli path:contrib/completion/zsh/_docker
-docker/compose path:contrib/completion/zsh/_docker-compose
-dbz/kube-aliases
 laggardkernel/git-ignore
 lukechilds/zsh-nvm
 mafredri/zsh-async
@@ -28,7 +25,6 @@ robbyrussell/oh-my-zsh path:plugins/brew
 robbyrussell/oh-my-zsh path:plugins/bundler
 robbyrussell/oh-my-zsh path:plugins/rbenv
 robbyrussell/oh-my-zsh path:plugins/vscode
-docker/cli path:contrib/completion/zsh kind:fpath
 rupa/z
 unixorn/git-extra-commands
 zpm-zsh/autoenv
