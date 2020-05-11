@@ -18,6 +18,11 @@ Install it first\n"
   exit 1
 fi
 
+if [ ! -L "$HOME/.tmux" ]; then
+    rm -rf "${HOME}/.tmux"
+    ln -sf "${HOME}/.dotfiles/tmux/tmux" "${HOME}/.tmux"
+fi
+
 if [ ! -e "$HOME/.tmux/plugins/tpm" ]; then
   printf "WARNING: Cannot found TPM (Tmux Plugin Manager) \
  at default location: \$HOME/.tmux/plugins/tpm.\n"
@@ -29,7 +34,7 @@ if [ -e "$HOME/.tmux.conf" ]; then
 fi
 
 cp -f "$HOME/.tmux.conf" "$HOME/.tmux.conf.bak" 2>/dev/null || true
-cp -a ./tmux/. "$HOME"/.tmux/
+#cp -a ./tmux/. "$HOME"/.tmux/
 ln -sf .tmux/.tmux.conf "$HOME"/.tmux.conf;
 ln -sf .tmux/.tmux.conf.local "$HOME"/.tmux.conf.local;
 
