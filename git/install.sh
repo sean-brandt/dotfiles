@@ -4,6 +4,8 @@
 # Don't ask ssh password all the time
 if [ "$(uname -s)" = "Darwin" ]; then
 	git config --global credential.helper osxkeychain
+elif command -v git-credential-manager >/dev/null 2>&1; then
+    git-credential-manager install
 else
 	git config --global credential.helper cache
 fi

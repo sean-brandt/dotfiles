@@ -83,15 +83,23 @@
   "terminal.integrated.fontFamily": "JetBrains Mono for Powerline",
   "workbench.iconTheme": "vscode-icons",
   "git.autofetch": true,
-  "sync.ignoredExtensions": [],
-  "sync.ignoredSettings": [],
   "editor.columnSelection": false,
-  "editor.formatOnSave": true,
   "git.autoStash": true,
   "git.fetchOnPull": true,
   "git-graph.dateFormat": "ISO Date & Time",
   "shellcheck.ignorePatterns": {
     ".zshrc": true
   },
-  "java.semanticHighlighting.enabled": true
+  "java.semanticHighlighting.enabled": true,
+"debug.console.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+"python.languageServer": "Microsoft",
+"python.insidersChannel": "off",
+"settingsSync.ignoredExtensions": [],
+"settingsSync.ignoredSettings": [],
+"cSpell.userWords": [
+  "splunk"
+],
+"vs-kubernetes": {
+  "vs-kubernetes.minikube-path.linux": "/home/u1cc31/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
+}
 }

@@ -9,8 +9,13 @@ export DOTFILES="$HOME/.dotfiles"
 export PROJECTS="$HOME/Code"
 
 # your default editor
-export EDITOR='vim'
-export VEDITOR='code'
+code="code"
+if command -v code-insiders >/dev/null 2>&1; then
+  code="code-insiders"
+fi
+export EDITOR="$(command -v vim)"
+export VISUAL="$(command -v ${code}) -nw"
+export VEDITOR="$(command -v ${code}) -nw"
 
 # all of our zsh files
 typeset -U config_files
@@ -71,8 +76,12 @@ function opcred () {
 # zprof
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/sean/.sdkman"
-[[ -s "/Users/sean/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/sean/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="${HOME}/.sdkman"
+[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
+if [[ -d "${SDKMAN_DIR}/candidates/java/current" ]] ; then
+    export JAVA_HOME="${SDKMAN_DIR}/candidates/java/current"
+    export PATH="$JAVA_HOME/bin:$PATH"
+fi
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then

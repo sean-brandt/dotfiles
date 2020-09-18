@@ -4,9 +4,6 @@
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
-    zinit-zsh/z-a-patch-dl \
-    zinit-zsh/z-a-as-monitor \
-    zinit-zsh/z-a-bin-gem-node \
     zinit-zsh/z-a-submods
 
 zinit ice atpull="!git reset --hard"
@@ -17,7 +14,6 @@ zinit for \
     chrissicool/zsh-256color \
     bckim92/zsh-autoswitch-conda \
     laggardkernel/git-ignore \
-    lukechilds/zsh-nvm \
     MichaelAquilina/zsh-history-filter \
     unixorn/git-extra-commands \
     zpm-zsh/autoenv \
@@ -54,8 +50,6 @@ zinit snippet https://github.com/gradle/gradle-completion/blob/master/_gradle
 zinit ice lucid wait as="completion"
 zinit snippet https://github.com/rbirnie/oh-my-zsh-keybase/blob/master/keybase/_keybase
 
-#zinit ice from="gh-r" fbin="fzf" wait lucid
-#zinit load junegunn/fzf-bin
 zinit pack="bgn+keys" for fzf
 zinit pack for ls_colors
 
@@ -88,7 +82,7 @@ zinit load zsh-users/zsh-autosuggestions
 zinit add-fpath -f ~/.zsh_custom/functions
 [[ -d ~/.zsh_custom/functions ]] && for i in ~/.zsh_custom/functions/*; do autoload -Uz $(basename $i); done
 
-zinit ice pick="async.zsh" src="pure.zsh"
+zinit ice multisrc="{pure,async}.zsh" pick="/dev/null" lucid nocd
 zinit load sindresorhus/pure
 
 

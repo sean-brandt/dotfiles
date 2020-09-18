@@ -28,6 +28,7 @@ if command -v code-insiders >/dev/null 2>&1; then
 fi
 export EDITOR="$(command -v vim)"
 export VISUAL="$(command -v ${code}) -nw"
+export VEDITOR="$(command -v ${code}) -nw"
 
 #
 # Shell Config env
