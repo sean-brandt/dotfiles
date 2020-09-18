@@ -3,5 +3,9 @@ Host *
   StrictHostKeyChecking no
   #UseKeychain yes
 
+  #Host github.com
+  #Hostname ssh.github.com
+  #Port 443
+
 Include ~/.ssh/config.local
 

@@ -63,10 +63,6 @@ done
 unset config_files updated_at
 
 
-# added by travis gem
-[ -f /Users/sean/.travis/travis.sh ] && source /Users/sean/.travis/travis.sh
-
-
 function opcred () {
   des="${1}"
   name="${2}"

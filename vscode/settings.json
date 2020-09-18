@@ -1,16 +1,16 @@
 {
   "editor.fontSize": 15,
-  "editor.formatOnSave": true,
   "editor.rulers": [
     80,
-    120
+    120,
+    160
   ],
   "editor.tabSize": 4,
   "editor.trimAutoWhitespace": true,
   "editor.tabCompletion": "on",
   "explorer.openEditors.visible": 0,
-  "window.restoreWindows": "none",
-  "terminal.external.osxExec": "Hyper.app",
+  "window.restoreWindows": "folders",
+  "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontSize": 14,
   "files.autoSave": "onFocusChange",
   "extensions.autoUpdate": true,
@@ -18,7 +18,7 @@
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "files.trimTrailingWhitespace": true,
   "editor.minimap.enabled": false,
-  "editor.renderWhitespace": "none",
+  "editor.renderWhitespace": "all",
   "workbench.colorTheme": "Dracula Pro",
   "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
@@ -32,9 +32,12 @@
   },
   "workbench.startupEditor": "newUntitledFile",
   "workbench.fontAliasing": "auto",
+  "docker.showExplorer": false,
   "workbench.editor.showIcons": true,
   "explorer.confirmDragAndDrop": false,
   "search.smartCase": true,
+  "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
   "files.associations": {
     "*.tmpl": "gotemplate"
   },
@@ -42,8 +45,6 @@
   "breadcrumbs.enabled": true,
   "telemetry.enableTelemetry": false,
   "terraform.telemetry.enabled": false,
-  "terraform.indexing.enabled": false,
-  "terraform.languageServer.enabled": true,
   "telemetry.enableCrashReporter": false,
   "go.useCodeSnippetsOnFunctionSuggest": true,
   "go.formatTool": "goimports",
@@ -60,39 +61,59 @@
   "go.coverOnSingleTest": true,
   "terminal.integrated.cursorStyle": "line",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "go.useLanguageServer": false,
-  "go.alternateTools": {
-    "go-langserver": "gopls"
-  },
-  "go.languageServerExperimentalFeatures": {
-    "format": true,
-    "autoComplete": true
-  },
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true
-  },
-  "window.newWindowDimensions": "maximized",
-  "go.buildFlags": [
-    "-v"
-  ],
-  "editor.fontFamily": "JetBrains Mono,Source Code Pro, Menlo, Monaco, 'Courier New', monospace",
-  "editor.smoothScrolling": true,
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "workbench.iconTheme": "vscode-icons",
-  "sync.gist": "dbd294a765364916aa4199338f465d3f",
-  "sync.autoUpload": true,
-  "sync.forceUpload": false,
-  "sync.autoDownload": true,
+  "go.installDependenciesWhenBuilding": false,
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true
   },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "python.jediEnabled": false,
+  "team.showWelcomeMessage": false,
+  "gitlens.views.repositories.location": "scm",
+  "gitlens.views.fileHistory.location": "explorer",
+  "gitlens.views.lineHistory.location": "explorer",
+  "gitlens.views.compare.location": "gitlens",
+  "gitlens.views.search.location": "gitlens",
+  "gitlens.keymap": "alternate",
+  "terminal.integrated.shell.linux": "/home/linuxbrew/.linuxbrew/bin/zsh",
   "vsicons.dontShowNewVersionMessage": true,
   "terminal.integrated.fontFamily": "JetBrains Mono for Powerline",
-  "[dockerfile]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-  }
+  "workbench.iconTheme": "vscode-icons",
+  "git.autofetch": true,
+  "editor.columnSelection": false,
+  "git.autoStash": true,
+  "git.fetchOnPull": true,
+  "git-graph.dateFormat": "ISO Date & Time",
+  "shellcheck.ignorePatterns": {
+    ".zshrc": true
+  },
+  "java.semanticHighlighting.enabled": true,
+"debug.console.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+"python.languageServer": "Microsoft",
+"python.insidersChannel": "off",
+"settingsSync.ignoredExtensions": [],
+"settingsSync.ignoredSettings": [],
+"diffEditor.codeLens": true,
+"sync.gist": "5b0254ea2270ca1b7af46cbacfc9aacf",
+"workbench.preferredDarkColorTheme": "Dracula Pro",
+"workbench.preferredHighContrastColorTheme": "Dracula Pro (Blade)",
+"workbench.preferredLightColorTheme": "Dracula Pro",
+"window.autoDetectColorScheme": true,
+"window.nativeFullScreen": false,
+"window.newWindowDimensions": "offset",
+"window.openFoldersInNewWindow": "on",
+"remote.SSH.configFile": "/Users/sean/.ssh/config.local",
+"[home-assistant]": {
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "editor.autoIndent": "full"
+}
 }
