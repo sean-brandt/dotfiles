@@ -101,5 +101,23 @@
 ],
 "vs-kubernetes": {
   "vs-kubernetes.minikube-path.linux": "/home/u1cc31/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
-}
+},
+"java.completion.favoriteStaticMembers": [
+
+  "org.junit.Assert.*",
+  "org.junit.Assume.*",
+  "org.junit.jupiter.api.Assertions.*",
+  "org.junit.jupiter.api.Assumptions.*",
+  "org.junit.jupiter.api.DynamicContainer.*",
+  "org.junit.jupiter.api.DynamicTest.*",
+  "org.mockito.Mockito.*",
+  "org.mockito.ArgumentMatchers.*",
+  "org.mockito.Answers.*"
+],
+"java.configuration.runtimes": [
+  {
+    "name": "JavaSE-11",
+    "path": "~/.sdkman/candidates/java/11.0.1-zulu"
+  }
+]
 }
