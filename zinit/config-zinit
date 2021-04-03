@@ -69,25 +69,11 @@ zinit snippet https://github.com/rbirnie/oh-my-zsh-keybase/blob/master/keybase/_
 zinit ice lucid wait
 zinit snippet OMZP::kubectl
 
-zinit pack="bgn+keys" for fzf
 zinit pack for ls_colors
 
 zinit ice wait lucid
 #zinit load rupa/z
 zinit load agkozak/zsh-z
-
-zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat"
-zinit light sharkdp/bat
-alias more="bat"
-alias less="bat"
-alias cat="bat"
-
-zinit ice as"command" from"gh-r" mv"ripgrep* -> rg" pick"rg/rg"
-zinit light BurntSushi/ripgrep
-
-zinit ice as"program" from"gh-r" mv"delta* -> delta" pick"delta/delta"
-zinit light dandavison/delta
-git config --global core.pager "delta --dark --hunk-style=plain"
 
 zinit ice as"program" pick"$ZPFX/bin/git-*" make"PREFIX=$ZPFX" src="etc/git-extras-completion.zsh"
 zinit light tj/git-extras

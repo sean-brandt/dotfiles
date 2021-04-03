@@ -20,7 +20,6 @@
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
   "workbench.colorTheme": "Dracula Pro",
-  "window.zoomLevel": 0,
   "extensions.ignoreRecommendations": false,
   "go.coverageDecorator": {
     "type": "gutter"
@@ -77,7 +76,6 @@
   "gitlens.views.lineHistory.location": "explorer",
   "gitlens.views.compare.location": "gitlens",
   "gitlens.views.search.location": "gitlens",
-  "gitlens.keymap": "alternate",
   "terminal.integrated.shell.linux": "/home/linuxbrew/.linuxbrew/bin/zsh",
   "vsicons.dontShowNewVersionMessage": true,
   "terminal.integrated.fontFamily": "JetBrains Mono for Powerline",
@@ -115,5 +113,15 @@
     "strings": true
   },
   "editor.autoIndent": "full"
-}
+},
+"keyboard.touchbar.enabled": false,
+"vs-kubernetes": {
+  "vs-kubernetes.minikube-path.mac": "/Users/sean/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+  "vs-kubernetes.draft-path.mac": "/Users/sean/.vs-kubernetes/tools/draft/darwin-amd64/draft",
+  "vs-kubernetes.helm-path.mac": "/Users/sean/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+  "vscode-kubernetes.minikube-path.mac": "/Users/sean/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+},
+"editor.formatOnPaste": false,
+"editor.formatOnSave": false,
+"editor.formatOnType": false
 }
