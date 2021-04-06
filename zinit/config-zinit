@@ -12,7 +12,6 @@ zinit load sean-brandt/enhancd
 zinit for \
     changyuheng/fz \
     chrissicool/zsh-256color \
-    bckim92/zsh-autoswitch-conda \
     laggardkernel/git-ignore \
     MichaelAquilina/zsh-history-filter \
     unixorn/git-extra-commands \
@@ -21,24 +20,33 @@ zinit for \
     zpm-zsh/colorize \
     zpm-zsh/colors \
     olets/zsh-abbr \
-    wolffaxn/brew-zsh-plugin \
     hschne/fzf-git \
     andrewferrier/fzf-z \
     Aloxaf/fzf-tab \
     mdumitru/git-aliases \
     reegnz/jq-zsh-plugin \
     droctothorpe/kubecolor \
-    ELLIOTTCABLE/rbenv.plugin.zsh \
     hcgraf/zsh-sudo \
     lukechilds/zsh-nvm \
     hlissner/zsh-autopair \
     zsh-users/zsh-history-substring-search \
     sirhc/op.plugin.zsh \
-    from="gh-r" mv="exa* -> exa" sbin ogham/exa \
     zpm-zsh/tmux \
     sean-brandt/zsh-aliases
 # wait lucid load='![[ "${KUBERNETES_MASTER}x" != "x" ]]' unload='[[ -z "${KUBERNETES_MASTER}" ]]' unixorn/kubectx-zshplugin
 #
+
+if command -v brew >/dev/null 2>&1; then
+  zinit load wolffaxn/brew-zsh-plugin
+fi
+
+if command -v conda >/dev/null 2>&1 ; then
+  zinit load bckim92/zsh-autoswitch-conda
+fi
+
+if command -v rbenv >/dev/null 2>&1; then
+  zinit load ELLIOTTCABLE/rbenv.plugin.zsh
+fi
 
 zinit light-mode lucid wait has"kubectl" for \
   id-as"kubectl_completion" \

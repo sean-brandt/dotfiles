@@ -3,8 +3,10 @@
 
 if command -v bat >/dev/null 2>&1; then
     echo > /dev/null
-else
+elif command -v brew >/dev/null 2>&1; then
     HOMEBREW_NO_AUTO_UPDATE=1 brew install bat
+elif command -v yay >/dev/null 2>&1; then
+    yay -Sy --needed --noprovides --noconfirm bat
 fi
 
 alias cat=bat

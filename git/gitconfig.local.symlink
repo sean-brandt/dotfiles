@@ -4,16 +4,13 @@
   ci = commit
   co = checkout
   commend = commit --amend --no-edit
-  count = shortlog -sn
   fa = fetch --all -p --tags
   fm = fetch-merge
-  fpr = fetch-pr
   g = grep --break --heading --line-number
   gi = grep --break --heading --line-number -i
   ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
   lt = log --tags --decorate --simplify-by-decoration --oneline
-  pr = open-pr
   please = push --force-with-lease
   st = status -sb
   whatadded = log --diff-filter=A
@@ -86,3 +83,20 @@
 	# Do not cache the vault contents
 	cachetextconv = false
 
+[delta]
+    features = side-by-side line-numbers decorations
+    syntax-theme = Dracula
+    plus-style = syntax "#003800"
+    minus-style = syntax "#3f0001"
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
+    hunk-header-decoration-style = cyan box ul
+
+[delta "line-numbers"]
+    line-numbers-left-style = cyan
+    line-numbers-right-style = cyan
+    line-numbers-minus-style = 124
+    line-numbers-plus-style = 28

@@ -1,5 +1,15 @@
+"automated installation of vimplug
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source ~/.config/nvim/init.vim
+endif
+
 " load plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
+"PlugInstall, PlugUpdate, PlugClean,
+"PlugUpgrade (upgrade vim plug), PlugStatus
+
 Plug 'scrooloose/nerdtree'
 Plug 'fatih/vim-go', {'tag': '*', 'do': ':GoInstallBinaries' }
 Plug 'nsf/gocode', {'rtp': 'vim'}

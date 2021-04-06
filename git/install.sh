@@ -2,17 +2,17 @@
 # -*- mode: sh; sh-indentation: 4; indent-tabs-mode: nil; sh-basic-offset: 4; -*-
 
 # Don't ask ssh password all the time
-if [ "$(uname -s)" = "Darwin" ]; then
-	git config --global credential.helper osxkeychain
-elif command -v git-credential-manager >/dev/null 2>&1; then
-    git-credential-manager install
+if command -v git-credential-manager-core >/dev/null 2>&1; then
+	echo > /dev/null
+elif command -v brew >/dev/null 2>&1; then
+	brew tap microsoft/git
+	brew install git-credential-manager-core
+	git-credential-manager-core configure
+elif command -v yay >/dev/null 2>&1; then
+    echo "TODO: create arch package"
+	git config --global credential.helper cache
 else
 	git config --global credential.helper cache
-fi
-
-# better diffs
-if command -v diff-so-fancy >/dev/null 2>&1; then
-	git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 fi
 
 # use vscode as mergetool
